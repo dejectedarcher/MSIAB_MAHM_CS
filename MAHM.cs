@@ -235,6 +235,8 @@ namespace MSIAfterburner.MAHM
 		
 		public Data ReadData()
 		{
+			br.BaseStream.Seek(0, SeekOrigin.Begin);
+			
 			Data data = new Data();
 			
 			data.header.dwSignature = br.ReadInt32();
